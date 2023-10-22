@@ -1,0 +1,182 @@
+\documentclass[fleqn,12pt,a4paper,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{newtxtext}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[cmintegrals]{newtxmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{calc, listings, parskip}
+\usepackage{longtable}
+\usepackage{blindtext}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{array}
+\graphicspath{ {figures/} }
+\renewcommand{\listfigurename}{List of plots}
+\renewcommand{\listtablename}{Tables}
+\setlength{\textheight}{24cm}
+\setlength{\textwidth}{16.6cm}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage[left=1.2in,right=1.8cm,top=2.0cm,bottom=2.5cm]{geometry}
+\graphicspath{{images/}}
+\usepackage[onehalfspacing]{setspace}%spacing between two lines
+\usepackage{times}
+\usepackage{nomencl}
+\usepackage{listings}
+
+\usepackage{appendix}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{fancybox}
+\usepackage{lipsum}
+\usepackage[bookmarks = true]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{apacite}
+\usepackage{natbib}
+\usepackage{float}
+\usepackage{chngcntr}
+\usepackage{multicol}
+\usepackage{pdfpages}
+\usepackage{booktabs,dcolumn,caption}
+\captionsetup{
+    labelfont=bf
+}
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\fancyhf{}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot{\thepage}
+\cfoot{\thepage}
+\pagestyle{plain}
+\pagenumbering{roman}
+\usepackage{float} % Allows for control of float positions
+\setcounter{page}{1}
+\usepackage{makeidx}
+\makeindex
+\everymath{\color{black}}
+\let\originaldisplaystyle\displaystyle \renewcommand \displaystyle{\color{black}\originaldisplaystyle}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{sectsty}
+\usepackage{caption}
+\usepackage{subcaption}
+\renewcommand{\cftlottitlefont}{\hfill\bfseries\Large}
+\renewcommand{\cftafterlottitle}{\hfill}
+\renewcommand\cftloftitlefont{\hfill\bfseries\Large}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftfigpresnum}{\textbf{Figure:} }
+\renewcommand{\cfttabpresnum}{\textbf{Table:} }
+\newlength{\mylenf}
+\usepackage[T1]{fontenc}
+\settowidth{\mylenf}{\cftfigpresnum}
+\setlength{\cftfignumwidth}{\dimexpr\mylenf+1.5em}
+\setlength{\cfttabnumwidth}{\dimexpr\mylenf+1.5em}
+\usepackage{hyperref}
+
+
+\hypersetup{
+colorlinks = true,
+filecolor  = black,
+citecolor  = black,
+linkcolor  = black,
+linktoc    = all,
+urlcolor   = black
+}
+\pagestyle{plain}
+
+\begin{document}
+\input{FrontPages}
+\renewcommand{\bibname}{\centerline{\Large{REFERENCES}}}
+
+\newpage
+    \addcontentsline{toc}{chapter}{List of Figures}
+    \renewcommand{\listfigurename}{\centerline{\Large{LIST OF FIGURES}}}
+    \listoffigures
+
+\newpage
+    \renewcommand{\contentsname}{\centerline{\Large{TABLE OF CONTENTS}}}
+    \tableofcontents
+
+    
+ 
+\clearpage
+\pagenumbering{arabic}
+\stepcounter{chapter}
+\include{Introduction}
+
+
+\clearpage
+\stepcounter{chapter}
+\include{LiteratureReview}
+
+\clearpage
+\stepcounter{chapter}
+\include{MaterialsAndMethods}
+
+\clearpage
+\stepcounter{chapter}
+\include{Result&Discussion}
+
+\clearpage
+\stepcounter{chapter}
+\include{Conclusion&Recommendation}
+
+
+\begin{comment}
+\clearpage
+\input{chapter1}
+\pagenumbering{arabic}
+%==================================
+\clearpage
+\chapter{Introduction}
+\input{introduction}
+%==================================
+\clearpage
+\input{chapter2}
+%==================================
+\clearpage
+\chapter{Literature Review }
+\input{literature}
+%=================================
+\clearpage
+\input{chapter3}
+%================================
+\chapter{Method}
+\input{methods}
+%=================================
+\clearpage
+\input{chapter4}
+%=================================
+\chapter{Results and Discussion}
+\input{results_and_discussion}
+%=================================
+\clearpage
+\input{chapter5}
+%=================================
+\chapter{Conclusion and Recommendations}
+\input{conclusion}
+\clearpage
+%================
+\input{references}
+%=================================
+%\input{appendix}
+%
+%=================================
+%\input{references}
+\clearpage
+%================================
+\end{comment}
+\bibliographystyle{apalike}
+\addcontentsline{toc}{chapter}{\large\bfseries REFERENCES}
+\bibliography{references}
+\end{document}
