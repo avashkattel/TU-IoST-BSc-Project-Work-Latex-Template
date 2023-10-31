@@ -15,3 +15,14 @@ To use this LaTeX Template with Overleaf (recommended), follow these steps:
 
 ### Video Tutorial : How to Upload Paper on Overleaf Account | Online LaTeX Editor
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/aRHGdbVe4q4/0.jpg)](https://youtube.com/watch?v=aRHGdbVe4q4)
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
